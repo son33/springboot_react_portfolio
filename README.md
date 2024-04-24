@@ -13,5 +13,7 @@ backend : springBoot
 
 DB : MySQL
 
+git : github, sourcetree
+
 ---
 ### 3. 특징
