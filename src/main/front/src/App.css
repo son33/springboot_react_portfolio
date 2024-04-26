@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .header{
     width: 100%;
     height: 80px;
@@ -40,6 +44,13 @@
     color: black;
     transition: 0.7s;
 }
+.modifyButton{
+    margin-top: 15px;
+    margin-left: auto;
+    width:75px;
+    color: white;
+    background-color: black;
+}
 .content-wrapper{
     width:100%;
     display: flex;
@@ -51,6 +62,86 @@
     max-width: 800px;
 }
 .content>div{
-    height:600px;
-    border: 3px solid black;
+    margin-bottom: 50px;
+}
+.introduce-wrapper{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutMe-wrapper, .skill-wrapper, .project-wrapper, .career-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.introduce-background{
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background-image: url("../public/backgroundImg.jpg");
+    background-size: cover;
+    opacity: 0.6;
+}
+.introduce{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.introduce-title{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+}
+.introduce-body{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.aboutMe-content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+.content-title{
+    text-align: center;
+    font-size: 80px;
+}
+.aboutMe-content{
+    margin-top: 60px;
+    display: flex;
+    width: 33%;
+}
+.icon{
+    font-size: 70px;
+}
+.aboutMe-content>div:last-child{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutMe-content>div>div:first-child{
+    font-size: 20px;
+    font-weight: 600;
+}
+.aboutMe-content>div>div:nth-child(2){
+    font-size: 15px;
+    margin-top: 10px;
+}
+.skill{
+    width: 100%;
+}
+.skill-content{
+}
+.skill-content>div:first-child{
+    font-size: 30px;
 }
