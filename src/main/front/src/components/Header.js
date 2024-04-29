@@ -16,7 +16,7 @@ const Header = () => {
                     <div className='list' onClick={() => moveScroll('introduce')}>소개</div>
                     <div className='list' onClick={() => moveScroll('skill')}>스킬</div>
                     <div className='list' onClick={() => moveScroll('project')}>프로젝트</div>
-                    <div className='list' onClick={() => moveScroll('career')}>경력</div>
+                    <div className='list' onClick={() => moveScroll('board')}>게시판</div>
                     <Link className='list' to="/login">로그인</Link>
                 </div>
             </div>

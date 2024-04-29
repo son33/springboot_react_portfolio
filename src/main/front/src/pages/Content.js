@@ -5,10 +5,14 @@ const Content = () => {
         <div className="content-wrapper">
             <div className="content">
                 <ContentList content_name="introduce" />
+                <div className="line"></div>
                 <ContentList content_name="aboutMe" />
+                <div className="line"></div>
                 <ContentList content_name="skill" />
+                <div className="line"></div>
                 <ContentList content_name="project" />
-                <ContentList content_name="career" />
+                <div className="line"></div>
+                <ContentList content_name="board" />
             </div>
         </div>
     )
