@@ -2,8 +2,8 @@ const Skill = () => {
     return (
         <div className="skill">
             <div className="content-title">SKILL</div>
-            <div className="skill-content-wrapper">
-                <div className="skill-content">
+            <div className="skill-content">
+                <div className="skill-content-list">
                     <div>front-end</div>
                     <div>
                         <div>
@@ -36,46 +36,54 @@ const Skill = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill-content">
+                <div className="skill-content-list">
                     <div>back-end</div>
                     <div>
                         <div>
-                            <img src="https://static.javatpoint.com/core/images/java-logo1.png" alt="java" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="java" />
+                            <div>JAVA</div>
                         </div>
                         <div>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/245px-Spring_Framework_Logo_2018.svg.png" alt="spring" />
+                            <div>Spring</div>
                         </div>
                         <div>
-                            <img src="https://i0.wp.com/thinkground.studio/wp-content/uploads/2020/05/200525_spring-boot-1.png?w=310&ssl=1" alt="springBoot" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/768px-Spring_Boot.svg.png" alt="springBoot" />
+                            <div>Spring boot</div>
                         </div>
                         <div>
-                            <img src="https://nodejs.org/static/logos/nodejsDark.svg" alt="node.js" />
+                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-nodejs-1-226034.png?f=webp&w=256" alt="node.js" />
+                            <div>node.js</div>
                         </div>
                     </div>
                 </div>
-                <div className="skill-content">
+                <div className="skill-content-list">
                     <div>DB</div>
                     <div>
                         <div>
                             <img src="https://cdn.iconscout.com/icon/free/png-512/free-oracle-9-1175131.png?f=webp&w=256" alt="ORACLE" />
+                            <div>ORACLE</div>
                         </div>
                         <div>
-                            <img src="https://www.mysql.com/common/logos/powered-by-mysql-125x64.png" alt="MySQL" />
+                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-mysql-20-1174940.png?f=webp&w=256" alt="MySQL" />
+                            <div>My SQL</div>
                         </div>
                         <div>
-                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-5-1175140.png?f=webp&w=256" alt="MongoDB" />
+                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-4-1175139.png?f=webp&w=256" alt="MongoDB" />
+                            <div>mongo DB</div>
                         </div>
                     </div>
                 </div>
-                <div className="skill-content">
+                <div className="skill-content-list">
                     <div>ETC</div>
                     <div>
                         <div>
-                            <img src="https://git-scm.com/images/logos/2color-lightbg@2x.png" alt="git" />
+                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-git-17-1175218.png?f=webp&w=256" alt="git" />
+                            <div>git</div>
                         </div>
                         <div>
-                            <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="github" />
-                            <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" alt="github" />
+                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-social-147-95508.png?f=webp&w=256" alt="github" />
+                            <div>github</div>
                         </div>
                     </div>
                 </div>

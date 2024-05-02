@@ -14,27 +14,28 @@ const Project = () => {
                         </div>
                         <div className="project-main">
                             <div className="project-explain">
-                                <p>개인 소개를 위한 Portfolio 페이지입니다.</p>
-                                <p></p>
-                                <p>개인 프로젝트이며</p>
+                                <p>프로젝트명 : 맨들맨들</p>
+                                <p>설명 : <b>맨토와 맨티 연결을 도와주는 웹사이트</b>입니다.
+                                    첫 팀 프로젝트로 사실상 웹개발에서 거의 사용하지않는 Servlet을 이용해 진행한 프로젝트이지만
+                                    프론트와 백의 구조를 이해하는데 큰 도움이 되었고, 계획한 플랫폼을 구현하면서 성취감을 느낄 수 있었습니다.
+                                </p>
                             </div>
-                            <div className="line"></div>
                             <div className="project-description">
                                 <div className="description-label">front-end</div>
-                                <div className="description-content">react</div>
+                                <div className="description-content">JSP</div>
                             </div>
                             <div className="project-description">
                                 <div className="description-label">back-end</div>
-                                <div className="description-content">springBoot</div>
+                                <div className="description-content">servlet</div>
                             </div>
                             <div className="project-description">
                                 <div className="description-label">DB</div>
-                                <div className="description-content">MySQL</div>
+                                <div className="description-content">ORACLE</div>
+                            </div>
+                            <div className="project-url">
+                                <a href="https://github.com/son33/mandlemandle" target="_blank">https://github.com/son33/mandlemandle</a>
                             </div>
                         </div>
-                    </div>
-                    <div className="project-url">
-                        <a href="https://github.com/son33/mandlemandle" target="_blank">https://github.com/son33/mandlemandle</a>
                     </div>
                 </div>
             </div>

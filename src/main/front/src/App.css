@@ -1,206 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm_code/style.css');
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: "Roboto", sans-serif;
+    font-family: 'NeoDunggeunmo Code';
     font-style: normal;
     font-size: 18px;
 }
 
-.header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid gray;
-    position: fixed;
-    background-color: white;
+body {
+    background-color: black;
+    color: white;
 }
 
-.header-content {
+/* header CSS */
+.header-wrapper {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.header {
+    z-index: 1;
     width: 100%;
     min-width: 400px;
     max-width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.logo {
+.header-logo {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-.list-wrapper {
+.header-logo:hover {
+    cursor: pointer;
+}
+
+.header-list-wrapper {
     width: 80%;
     display: flex;
     justify-content: flex-end;
     gap: 5%;
 }
 
-.logo:hover {
-    cursor: pointer;
-}
-
-.list {
-    color: #474747;
-    font-weight: 600;
+.header-list {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.list:hover {
+.header-list:hover {
     cursor: pointer;
-    color: black;
-    transition: 0.7s;
+    transition: 1.7s;
 }
 
-.line {
-    width: 100%;
-    height: 3px;
-    background-color: gray;
-}
-
+/* content */
 .modifyButton {
-    margin-top: 15px;
-    margin-left: auto;
-    width: 75px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #ffffffe0;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px white;
 }
 
-.content-wrapper, .footer-wrapper {
+.content-wrapper {
     width: 100%;
-    display: flex;
+    display: grid;
     justify-content: center;
-    padding-top: 80px;
 }
 
-.content, .footer {
-    width: 100%;
-    min-width: 400px;
-    max-width: 800px;
-}
-
-.content>div {
-    margin-bottom: 50px;
-}
-
-.introduce-wrapper {
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+.introduce-wrapper,
 .aboutMe-wrapper,
 .skill-wrapper,
 .project-wrapper,
 .career-wrapper,
-.reply-wrapper {
-    display: flex;
-    flex-direction: column;
+.board-wrapper {
+    display: grid;
     align-items: center;
-}
-
-.introduce-background {
-    z-index: -1;
+    justify-content: center;
     width: 100%;
-    height: 500px;
-    position: absolute;
-    left: 0;
-    top: 80px;
-    background-image: url("../public/backgroundImg.jpg");
-    background-size: cover;
-    opacity: 0.6;
+    min-width: 400px;
+    max-width: 800px;
+    height: 100vh;
 }
 
-.introduce {
-    height: 100%;
+.introduce,
+.aboutMe,
+.skill,
+.project,
+.career,
+.board {
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.content-title {
+    text-align: center;
+    font-size: 60px;
+}
+
+/* introduce */
 .introduce-title>p {
     text-align: center;
-    color: white;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
 }
 
-.introduce-body {
-    margin-top: 30px;
+.introduce-content {
+    margin-top: 80px;
 }
 
-.introduce-body>p {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
+.introduce-content>p {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
 }
 
-.aboutMe-content-wrapper {
+.introduce-content>p>b {
+    color: rgb(255, 149, 149);
+}
+
+/* aboutMe */
+.aboutMe-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
 }
 
-.content-title {
-    text-align: center;
-    font-size: 80px;
-}
-
-.aboutMe-content {
+.aboutMe-content-list {
     margin-top: 60px;
     display: flex;
     width: 33%;
 }
 
-.icon {
+.aboutMe-icon>span {
     font-size: 70px;
 }
 
-.aboutMe-content>div:last-child {
+.aboutMe-content-list>div:last-child {
     margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    align-items: center;
 }
 
-.aboutMe-content>div>div:first-child {
+.aboutMe-content-list>div>div {
+    font-size: 16px;
+}
+
+.aboutMe-content-list>div>div:first-child {
     font-size: 20px;
     font-weight: 600;
 }
 
-.aboutMe-content>div>div:nth-child(2) {
-    font-size: 15px;
-    margin-top: 10px;
-}
-
-.skill {
-    width: 100%;
-}
-
-.skill-content {
+/* skill */
+.skill-content-list {
     margin-top: 20px;
 }
 
-.skill-content>div:first-child {
+.skill-content-list>div:first-child {
     font-size: 35px;
-    font-weight: 500;
 }
 
-.skill-content>div:last-child {
+.skill-content-list>div:last-child {
     margin: 20px 0;
     padding: 20px 0;
-    background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -208,26 +185,22 @@
     gap: 20px;
 }
 
-.skill-content>div:last-child:hover {
-    box-shadow: 3px 3px 3px gray;
-    transition: 0.7s;
-}
-
-.skill-content>div:last-child:not(:hover) {
-    transition: 0.7s;
-}
-
-.skill-content>div>div {
+.skill-content-list>div>div {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
     padding: 5px;
 }
 
-.skill-content>div>div>img {
-    height: 75px;
+.skill-content-list>div>div>img {
+    height: 4vh;
 }
 
+.skill-content-list>div>div>div {
+    margin-top: 15px;
+}
+
+/* project */
 .project-content-wrapper {
     margin-top: 50px;
     padding: 10px;
@@ -274,6 +247,14 @@
     margin: 10px;
 }
 
+.project-explain>p:first-child {
+    padding-bottom: 10px;
+}
+
+.project-explain>p:last-child {
+    padding-bottom: 24px;
+}
+
 .project-description {
     display: flex;
 }
@@ -282,8 +263,8 @@
     width: 30%;
 }
 
-.project-url {
-    text-align: center;
+.project-url>a {
+    color: black;
 }
 
 .swiper {
@@ -309,43 +290,28 @@
     object-fit: cover;
 }
 
-.footer-wrapper{
+.footer-wrapper {
     background-color: gray;
+    display: grid;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-.footer{
-    margin-bottom: 50px;
+.footer {
+    margin-bottom: 10px;
 }
 
-.footer-title{
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.footer-body{
+.footer-body {
     display: flex;
     gap: 15px;
-    margin: 50px;
+    margin: 10px;
+    justify-content: center;
 }
 
-.footer-body>div{
-    display: flex;
-    align-items: center;
-    width: 50%;
+.footer-logo>img {
+    width: 50px;
 }
 
-.footer-body>div>div{
-    width: 50%;
-}
-
-.footer-logo>img{
-    width: 80%;
-}
-
-.footer-body>div>div>div>a{
-    color: black;
-}
-
-.copyright{
+.copyright {
     text-align: center;
 }

@@ -10,13 +10,13 @@ const ContentList = (props) => {
     return (
         <>
             <div id={contentName} className={contentName + "-wrapper"}>
-                <ModifyButton content_name={contentName} />
                 {contentName === "introduce" ? <Introduce />
                     : contentName === "aboutMe" ? <AboutMe />
                         : contentName === "skill" ? <Skill />
                             : contentName === "project" ? <Project />
                                 : contentName === "board" ? <Board /> : null
                 }
+                <ModifyButton content_name={contentName} />
             </div>
         </>
     )
