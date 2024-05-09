@@ -9,6 +9,10 @@
     font-size: 18px;
 }
 
+a {
+    color: black;
+}
+
 body {
     background-color: black;
     color: white;
@@ -93,6 +97,7 @@ body {
     min-width: 400px;
     max-width: 800px;
     height: 100vh;
+    min-height: 950px;
 }
 
 .introduce,
@@ -193,7 +198,7 @@ body {
 }
 
 .skill-content-list>div>div>img {
-    height: 4vh;
+    height: 65px;
 }
 
 .skill-content-list>div>div>div {
@@ -201,27 +206,59 @@ body {
 }
 
 /* project */
-.project-content-wrapper {
-    margin-top: 50px;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 5px 5px 5px gray;
+.project-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.project-content {
+.project-list-title {
+    width: 800px;
     margin-top: 30px;
-    display: grid;
-    justify-content: center;
+    padding: 20px 20px;
+    margin-right: auto;
+    font-size: 30px;
+    border-radius: 24px;
 }
 
-.project-title,
-.project-day {
-    text-align: center;
+.project-list-title:hover {
+    color: black;
+    background-color: white;
+    transition: 0.7s;
+}
+
+.project-modal {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.4);
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.project-content-wrapper {
+    width: 70%;
+    height: 80%;
+    padding: 50px;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px white;
+}
+
+.project-exit {
+    font-size: 30px;
+    float: right;
 }
 
 .project-title {
     font-size: 40px;
     font-weight: 600;
+    text-align: center;
 }
 
 .project-day {
@@ -229,30 +266,22 @@ body {
     font-weight: 200;
 }
 
-.project-body {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+.project-content {
+    margin-top: 40px;
 }
 
-.project-body>div {
-    width: 50%;
+.project-content>div {
+    width: 100%;
+    padding-top: 20px;
 }
 
 .project-main {
-    padding: 5px;
+    display: flex;
+    gap: 4vh;
 }
 
 .project-main>div {
-    margin: 10px;
-}
-
-.project-explain>p:first-child {
-    padding-bottom: 10px;
-}
-
-.project-explain>p:last-child {
-    padding-bottom: 24px;
+    width: 50%;
 }
 
 .project-description {
@@ -263,25 +292,13 @@ body {
     width: 30%;
 }
 
-.project-url>a {
-    color: black;
-}
-
 .swiper {
-    width: 100%;
-    max-width: 450px;
-    min-width: 200px;
-    height: 100%;
+    height: 45vh;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .swiper-slide img {
@@ -290,6 +307,58 @@ body {
     object-fit: cover;
 }
 
+/* board */
+.board-content-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    min-width: 500px;
+    border: 3px solid white;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.board-content-title {
+    width: 75%;
+    padding: 10px;
+}
+
+.board-content-date, .delete-board, thead>tr {
+    text-align: center;
+}
+
+.write {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.write>input,
+.write>button {
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 12px;
+    height: 30px;
+    padding: 5px;
+}
+
+.write>input {
+    width: 83%;
+}
+
+.write>button {
+    height: 45px;
+    width: 15%;
+    box-shadow: 3px 3px 3px white;
+}
+
+.write>button:active{
+    padding-left: 3px;
+    padding-top: 3px;
+    box-shadow: none;
+}
+
+/* footer */
 .footer-wrapper {
     background-color: gray;
     display: grid;
