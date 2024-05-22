@@ -12,7 +12,7 @@ import com.son.portfolio.project.model.vo.Project;
 public class ProjectServiceImpl implements ProjectService {
 	@Autowired
 	private ProjectDao dao;
-	
+
 	@Override
 	public ArrayList<Project> getProjectList() {
 		return dao.getProjectList();

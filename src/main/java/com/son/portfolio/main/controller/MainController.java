@@ -18,23 +18,23 @@ import com.son.portfolio.main.model.vo.Skill;
 public class MainController {
 	@Autowired
 	private MainService service;
-
+	
 	@GetMapping("")
-	public ArrayList<Main> getMain() {
+	public ArrayList<Main> getMain(){
 		return service.getMain();
 	}
 	
-	@GetMapping("/introduce")
+	@GetMapping("introduce")
 	public Introduce getIntroduce() {
 		return service.getIntroduce();
 	}
 	
-	@GetMapping("/aboutMe")
+	@GetMapping("aboutme")
 	public AboutMe getAboutMe() {
 		return service.getAboutMe();
 	}
 	
-	@GetMapping("/skill")
+	@GetMapping("skill")
 	public ArrayList<Skill> getSkill() {
 		return service.getSkill();
 	}

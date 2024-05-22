@@ -12,7 +12,7 @@ import com.son.portfolio.project.model.vo.Project;
 public class ProjectDaoImpl implements ProjectDao {
 	@Autowired
 	private SqlSessionTemplate session;
-	
+
 	@Override
 	public ArrayList<Project> getProjectList() {
 		return new ArrayList<Project>(session.selectList("projectMapper.getProjectList"));

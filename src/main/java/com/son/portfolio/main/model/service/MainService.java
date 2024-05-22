@@ -10,7 +10,10 @@ import com.son.portfolio.main.model.vo.Skill;
 public interface MainService {
 
 	ArrayList<Main> getMain();
+
 	Introduce getIntroduce();
+
 	AboutMe getAboutMe();
+
 	ArrayList<Skill> getSkill();
 }

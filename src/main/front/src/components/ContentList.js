@@ -4,8 +4,10 @@ import AboutMe from "./AboutMe";
 import Skill from "./Skill";
 import Project from "./Project";
 import Board from "./Board";
+import { useSelector } from "react-redux";
 
 const ContentList = (props) => {
+    const loginResult = useSelector((store) => store.loginResult);
     const contentName = props.content_name;
     let ContentComponent = null;
 
@@ -34,7 +36,7 @@ const ContentList = (props) => {
         <>
             <div id={contentName} className={contentName + "-wrapper"}>
                 {ContentComponent && <ContentComponent />}
-                <ModifyButton content_name={contentName} />
+                {loginResult > 0 ? (<ModifyButton content_name={contentName} />) : ''}
             </div>
         </>
     )

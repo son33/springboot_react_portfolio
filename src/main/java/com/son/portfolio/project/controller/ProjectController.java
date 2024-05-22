@@ -15,9 +15,9 @@ import com.son.portfolio.project.model.vo.Project;
 public class ProjectController {
 	@Autowired
 	private ProjectService service;
-	
+
 	@GetMapping("")
-	public ArrayList<Project> getProjectList(){
+	public ArrayList<Project> getProjectList() {
 		return service.getProjectList();
 	}
 }

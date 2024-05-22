@@ -13,7 +13,7 @@ const AboutMe = () => {
     });
 
     useEffect(() => {
-        axios.get("/api/main/aboutMe")
+        axios.get("/api/main/aboutme")
             .then(res => setAbout(res.data))
             .catch(error => console.log(error));
     }, []);

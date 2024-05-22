@@ -15,7 +15,7 @@ import com.son.portfolio.main.model.vo.Skill;
 public class MainServiceImpl implements MainService {
 	@Autowired
 	private MainDao dao;
-	
+
 	@Override
 	public ArrayList<Main> getMain() {
 		return dao.getMain();
