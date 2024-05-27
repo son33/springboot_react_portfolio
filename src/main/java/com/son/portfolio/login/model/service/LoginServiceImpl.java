@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.son.portfolio.login.model.dao.LoginDao;
+import com.son.portfolio.login.model.vo.User;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -11,7 +12,7 @@ public class LoginServiceImpl implements LoginService {
 	private LoginDao dao;
 
 	@Override
-	public int loginResult(String id, String password) {
-		return dao.loginResult(id, password);
+	public int loginResult(User user) {
+		return dao.loginResult(user);
 	}
 }

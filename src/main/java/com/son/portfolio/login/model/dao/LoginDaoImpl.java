@@ -1,11 +1,10 @@
 package com.son.portfolio.login.model.dao;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import com.son.portfolio.login.model.vo.User;
 
 @Repository
 public class LoginDaoImpl implements LoginDao {
@@ -13,10 +12,12 @@ public class LoginDaoImpl implements LoginDao {
 	private SqlSessionTemplate session;
 
 	@Override
-	public int loginResult(String id, String password) {
-		Map<String, Object> login = new HashMap<>();
-		login.put("id", id);
-		login.put("password", password);
-		return session.selectOne("userMapper.loginResult",login);
+	public int loginResult(User user) {
+		User result = session.selectOne("userMapper.loginResult",user);
+		if(result != null) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 }

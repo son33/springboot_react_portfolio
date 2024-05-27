@@ -7,7 +7,7 @@ import { modalDisplayOn } from "../store";
 const Project = () => {
     const [projectList, setProjectList] = useState([]);
     const [selectProject, setSelectProject] = useState(null);
-    const modalDisPlay = useSelector((store) => store.str);
+    const modalDisPlay = useSelector((store) => store.modal.display);
     const disPath = useDispatch();
 
     useEffect(() => {

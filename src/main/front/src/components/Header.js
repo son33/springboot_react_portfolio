@@ -1,14 +1,21 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logoutSuccess } from '../store';
 
 const Header = () => {
-    const loginResult = useSelector((store) => store.loginResult);
+    const dispatch = useDispatch();
+    const loginResult = useSelector((store) => store.login.loginResult);
+
     const moveScroll = (id) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         };
     };
+
+    const logout = () => {
+        dispatch(logoutSuccess());
+    }
 
     return (
         <div className='header-wrapper'>
@@ -20,7 +27,7 @@ const Header = () => {
                     <div className='header-list' onClick={() => moveScroll('project')}>프로젝트</div>
                     <div className='header-list' onClick={() => moveScroll('board')}>게시판</div>
                     {loginResult > 0 ? (
-                        <Link className='header-list' to="/user/logout">로그아웃</Link>
+                        <div className='header-list' id="logout"  onClick={logout}>로그아웃</div>
                     ) : (
                         <Link className='header-list' to="/user">로그인</Link>
                     )}

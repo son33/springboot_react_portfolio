@@ -1,6 +1,8 @@
 package com.son.portfolio.login.model.dao;
 
+import com.son.portfolio.login.model.vo.User;
+
 public interface LoginDao {
 
-	int loginResult(String id, String password);
+	int loginResult(User user);
 }

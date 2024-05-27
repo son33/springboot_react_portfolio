@@ -1,19 +1,39 @@
+import { combineReducers, legacy_createStore } from "redux";
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 export const modalDisplayOn = () => ({ type: 'modalOpen' });
 export const modalDisplayOff = () => ({ type: 'modalOff' });
 export const loginSuccess = () => ({ type: 'loginSuccess' });
 export const logoutSuccess = () => ({ type: 'logoutSuccess' });
 
-const initState = {
-    str: "none",
+const persistConfig = {
+    key: 'root',
+    storage,
+    whitelist: ['loginResult'],
+};
+
+const initModalState = {
+    display: "none",
+}
+
+const initLoginState = {
     loginResult: 0,
 }
 
-export const reducer = (state = initState, action) => {
+const modalReducer = (state = initModalState, action) => {
     switch (action.type) {
         case 'modalOpen':
-            return { str: "flex" };
+            return { display: "flex" };
         case 'modalOff':
-            return { str: "none" };
+            return { display: "none" };
+        default:
+            return state;
+    }
+}
+
+const loginReducer = (state = initLoginState, action) => {
+    switch (action.type) {
         case 'loginSuccess':
             return { loginResult: 1 };
         case 'logoutSuccess':
@@ -23,4 +43,14 @@ export const reducer = (state = initState, action) => {
     }
 }
 
-export default reducer;
+const rootRducer = combineReducers({
+    modal: modalReducer,
+    login: loginReducer,
+});
+
+const persistedReducer = persistReducer(persistConfig, rootRducer);
+
+const store = legacy_createStore(persistedReducer);
+const persistor = persistStore(store);
+
+export { store, persistor };

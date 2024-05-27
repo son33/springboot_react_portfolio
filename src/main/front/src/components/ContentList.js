@@ -7,7 +7,7 @@ import Board from "./Board";
 import { useSelector } from "react-redux";
 
 const ContentList = (props) => {
-    const loginResult = useSelector((store) => store.loginResult);
+    const loginResult = useSelector((store) => store.login.loginResult);
     const contentName = props.content_name;
     let ContentComponent = null;
 

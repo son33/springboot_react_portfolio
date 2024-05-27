@@ -3,7 +3,7 @@ import SwiperImage from "./SwiperImage";
 import { modalDisplayOff } from "../store";
 
 const ProjectModal = ({project, display}) => {
-    const modalDisPlay = useSelector((store) => store.str);
+    const modalDisPlay = useSelector((store) => store.modal.display);
     const disPath = useDispatch();
 
     const handleCloseProject = () => {
