@@ -8,7 +8,7 @@ const Project = () => {
     const [projectList, setProjectList] = useState([]);
     const [selectProject, setSelectProject] = useState(null);
     const modalDisPlay = useSelector((store) => store.modal.display);
-    const disPath = useDispatch();
+    const disPatch = useDispatch();
 
     useEffect(() => {
         axios.get("/api/project")
@@ -18,7 +18,7 @@ const Project = () => {
 
     const handleProjectClick = (project) => {
         setSelectProject(project);
-        disPath(modalDisplayOn())
+        disPatch(modalDisplayOn());
     }
 
     return (
@@ -29,7 +29,7 @@ const Project = () => {
                     <div key={project.projectNo} id={project.title} className="project-list-title" onClick={() => handleProjectClick({ ...project })}>{project.title}</div>
                 ))}
             </div>
-            {selectProject && <ProjectModal project={selectProject} display={modalDisPlay} />}
+            {modalDisPlay =='flex' && <ProjectModal project={selectProject} />}
         </div>
     )
 }

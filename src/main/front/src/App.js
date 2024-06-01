@@ -8,14 +8,12 @@ import Content from './pages/Content';
 function App() {
   return (
     <BrowserRouter>
-      <body>
-        <Header />
-        <Routes>
-            <Route path="/" element={<Content />} />
-            <Route path="/user" element={<Login />} />
-        </Routes>
-        <Footer />
-      </body>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Content />} />
+        <Route path="/user" element={<Login />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

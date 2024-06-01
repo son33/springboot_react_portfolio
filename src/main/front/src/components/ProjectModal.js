@@ -3,7 +3,6 @@ import SwiperImage from "./SwiperImage";
 import { modalDisplayOff } from "../store";
 
 const ProjectModal = ({project, display}) => {
-    const modalDisPlay = useSelector((store) => store.modal.display);
     const disPath = useDispatch();
 
     const handleCloseProject = () => {
@@ -11,7 +10,7 @@ const ProjectModal = ({project, display}) => {
     }
 
     return (
-        <div id="modal" className="project-modal" style={{modalDisPlay}}>
+        <div id="modal" className="project-modal">
             <div className="project-content-wrapper">
                 <div className="project-exit" onClick={handleCloseProject}>X</div>
                 <div className="project-title">
