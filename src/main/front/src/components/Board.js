@@ -13,7 +13,7 @@ const Board = () => {
     }
 
     const writeBoard = () => {
-        if (content == '') {
+        if (content === '') {
             alert("내용을 입력해주세요");
         } else {
             axios.post("/api/board/write", boardData)
@@ -36,7 +36,6 @@ const Board = () => {
 
     useEffect(() => {
         fetchBoards();
-        console.log(boards)
     }, []);
 
     return (
